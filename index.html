@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Concentration</title>
+	<link rel="stylesheet" href="vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="row bg-dark text-light" style="height:80px;">
+		<div class="col-md-6 col-sm-12 align-self-center text-center px-4">
+			<label>
+				Board Size
+				<select class="form-select form-select-lg align-middle" aria-label="Board Size" id="select_size">
+					<option value="4">4x4</option>
+					<option value="6">6x6</option>
+					<option value="8">8x8</option>
+				</select>
+			</label>
+		</div>
+		<div class="col-md-6 col-sm-12 align-self-center text-center px-4">
+			<button type="button" class="btn btn-light align-middle" id="btn_reset">Reset</button>
+		</div>
+	</div>
+	<div class="row bg-light" style="height:calc(100% - 110px);">
+		<div class="col-12 main"></div>
+	</div>
+	<div class="row bg-dark text-light align-self-center text-center px-4" style="height:30px;">
+		<div class="col-12 align-self-center">
+			Built by <a href="https://github.com/mr-jac">Jacob DeBoer</a>
+		</div>
+	</div>
+
+	<script src="js/game.js"></script>
+
+</body>
+</html>

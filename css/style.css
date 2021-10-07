@@ -1,0 +1,59 @@
+body {
+	padding: 0;
+}
+.main {
+	background-image: url("../img/bg_dark.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 0.5s;
+	display: flex;
+	flex-direction: column;
+}
+.main.solved {
+	background-image: url("../img/bg.jpg");
+}
+.cCardRow {
+	flex: 1;
+	display: flex;
+}
+.cCard {
+	height: 100%;
+	flex: 1;
+	position: relative;
+	transition: 0.8s;
+	transform-style: preserve-3d;
+}
+.cCard.flipped {
+	transform: rotateY(180deg);
+}
+.side {
+	height: calc(100% - 4px);
+	width: calc(100% - 4px);
+	margin: 2px;
+	padding: 10px;
+	border: 1px solid black;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.side.front {
+	background-size: cover;
+	background-position: center;
+	transform: rotateY(180deg);
+}
+.side.back {
+	background-color: #7acc90;
+	background-image: url("../img/questionmark.png");
+	background-origin: content-box;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.main:not(.locked) .side.back:hover {
+	filter: brightness(1.25);
+	-webkit-filter: brightness(1.25);
+	cursor: pointer;
+}
